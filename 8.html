@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+
+<input id="num1">
+<input id="num2">
+
+<select id="operation">
+    <option value="add">+</option>
+    <option value="sub">-</option>
+    <option value="mul">*</option>
+    <option value="div">/</option>
+</select>
+
+<button onclick="calculate()">Calculate</button>
+<p id="result"></p>
+
+<script>
+    function calculate() {
+        const a = Number(num1.value);
+        const b = Number(num2.value);
+        const op = operation.value;
+
+        let r;
+        if (op === "add") r = a + b;
+        if (op === "sub") r = a - b;
+        if (op === "mul") r = a * b;
+        if (op === "div") r = a / b;
+
+        result.textContent = r;
+    }
+</script>
+
+</body>
+</html>
