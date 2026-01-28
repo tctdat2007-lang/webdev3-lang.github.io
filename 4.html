@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<select id="target"></select>
+
+<script>
+    const students = [
+        { id: 2345678, name: "John" },
+        { id: 2134657, name: "Paul" },
+        { id: 5423679, name: "Jones" }
+    ];
+
+    const target = document.getElementById("target");
+
+    students.forEach(s => {
+        const option = document.createElement("option");
+        option.value = s.id;
+        option.textContent = s.name;
+        target.appendChild(option);
+    });
+</script>
+
+</body>
+</html>
