@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+</head>
+<body>
+
+<p id="trigger">Hover me</p>
+<img id="target" src="picA.jpg" width="200">
+
+<script>
+    const trigger = document.getElementById("trigger");
+    const img = document.getElementById("target");
+
+    trigger.addEventListener("mouseover", () => {
+        img.src = "picB.jpg";
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        img.src = "picA.jpg";
+    });
+</script>
+
+</body>
+</html>
