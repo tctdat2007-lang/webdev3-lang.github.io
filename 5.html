@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+<section></section>
+
+<script>
+    const picArray = [
+        {
+            title: "Pic 1",
+            medium: "pic1.jpg",
+            caption: "Caption 1",
+            description: "Description 1"
+        },
+        {
+            title: "Pic 2",
+            medium: "pic2.jpg",
+            caption: "Caption 2",
+            description: "Description 2"
+        }
+    ];
+
+    const section = document.querySelector("section");
+
+    picArray.forEach(pic => {
+        const article = document.createElement("article");
+        article.className = "card";
+
+        article.innerHTML = `
+      <h2>${pic.title}</h2>
+      <figure>
+        <img src="${pic.medium}" alt="${pic.title}">
+        <figcaption>${pic.caption}</figcaption>
+      </figure>
+      <p>${pic.description}</p>
+    `;
+
+        section.appendChild(article);
+    });
+</script>
+
+</body>
+</html>
