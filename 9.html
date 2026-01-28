@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 9</title>
+</head>
+<body>
+
+<input id="calc" placeholder="e.g. 3+5">
+<button onclick="calc()">Calculate</button>
+<p id="result"></p>
+
+<script>
+    function calc() {
+        const input = calcInput.value;
+        let r;
+
+        if (input.includes("+")) {
+            const [a,b] = input.split("+");
+            r = Number(a) + Number(b);
+        } else if (input.includes("-")) {
+            const [a,b] = input.split("-");
+            r = Number(a) - Number(b);
+        } else if (input.includes("*")) {
+            const [a,b] = input.split("*");
+            r = Number(a) * Number(b);
+        } else if (input.includes("/")) {
+            const [a,b] = input.split("/");
+            r = Number(a) / Number(b);
+        }
+
+        result.textContent = r;
+    }
+
+    const calcInput = document.getElementById("calc");
+</script>
+
+</body>
+</html>
