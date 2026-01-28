@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+
+<ul id="target"></ul>
+
+<script>
+    const names = ["John", "Paul", "Jones"];
+    const target = document.getElementById("target");
+
+    let html = "";
+    for (let i = 0; i < names.length; i++) {
+        html += `<li>${names[i]}</li>`;
+    }
+
+    target.innerHTML = html;
+</script>
+
+</body>
+</html>
